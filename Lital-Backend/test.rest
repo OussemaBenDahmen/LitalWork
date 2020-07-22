@@ -1,0 +1,21 @@
+POST http://localhost:5000/app/login 
+Content-Type: application/json
+
+{
+    "email": "oussema@gmail.com",
+    "password": "123456789"
+}
+
+###
+GET http://localhost:5000/app/user/get 
+Set-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVmeiIsImlhdCI6MTU5NTE4NTIxNn0.5sbe4QBKlOfHONZi3YFZri9t_YbLmuKNii4bVwQpRi0
+
+###
+POST http://localhost://5000/app/logout 
+Content-Type: application/json
+Set-Cookie: token = zdzlfzl
+
+{
+    "data":"dljzlhgd"
+}
+
