@@ -1,0 +1,34 @@
+.historique {
+  background: linear-gradient(#fff2cc, #dad5d2);
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+h1 {
+  font-family: fantasy;
+  color: rgb(139, 74, 0);
+  text-align: start;
+  margin-left: 140px;
+}
+.historicbody {
+  min-height: 70vh;
+}
+
+.tableauhistorique {
+  width: 1000px;
+  text-align: start;
+  margin-bottom: 100px;
+}
+th {
+  border: 1px solid rgb(214, 142, 47);
+  background-color: cornsilk;
+  margin-bottom: 7px;
+  color: rgb(136, 103, 12);
+  font-size: larger;
+}
+td {
+  border: 1px solid rgb(214, 142, 47);
+  text-align: center;
+  background-color: cornsilk;
+  color: rgb(105, 90, 90);
+}

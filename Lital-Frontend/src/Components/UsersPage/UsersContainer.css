@@ -1,0 +1,16 @@
+.cell {
+  background-color: white;
+  border: 1px solid black;
+  padding: 15px;
+}
+.Users-container {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  margin-top: 50px;
+}
+.trash-btn {
+  background-color: transparent;
+  border: none;
+
+}

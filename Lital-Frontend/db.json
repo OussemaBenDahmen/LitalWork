@@ -1,0 +1,136 @@
+{
+  "Articles": [
+    {
+      "id": 3,
+      "name": "lac 3",
+      "ref": "zq2d151",
+      "type": "sac a dos",
+      "collection": "hiver",
+      "localisation": "depot",
+      "carton": "1",
+      "mesure": "L",
+      "quantite": 12,
+      "prod": "Prototype",
+      "marque": "Gucci",
+      "color": "red"
+    },
+    {
+      "id": 4,
+      "name": "sac 4",
+      "ref": "qEFS1FQ3S2D1",
+      "type": "saccoche",
+      "collection": "ete",
+      "localisation": "stock",
+      "carton": "blabla",
+      "mesure": "M",
+      "quantite": 1,
+      "prod": "production",
+      "marque": "adidas",
+      "color": "green"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "lastname": "Oussema",
+      "email": "Oussema@gmail.com",
+      "password": "0000",
+      "role": "Admin"
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "email": "amira@gmail.com",
+      "password": "azerty",
+      "role": "User",
+      "id": 2
+    }
+  ],
+  "history": [
+    {
+      "username": "Oussema",
+      "date": "Fri Jun 26 2020 00:56:30",
+      "action": "Edit",
+      "productName": "sac 2",
+      "id": 1
+    },
+    {
+      "username": "Oussema",
+      "date": "Fri Jun 26 2020 01:38:22",
+      "action": "Edit",
+      "productName": "sac 4",
+      "id": 2
+    },
+    {
+      "username": "Oussema",
+      "date": "Fri Jun 26 2020 09:15:03",
+      "action": "Add",
+      "productName": "fghj",
+      "id": 3
+    },
+    {
+      "username": "Amira",
+      "date": "Fri Jun 26 2020 09:17:04",
+      "action": "Delete",
+      "productName": "sac 2",
+      "id": 4
+    },
+    {
+      "username": "Oussema",
+      "date": "Thu Jul 02 2020 14:53:37",
+      "action": "Add",
+      "productName": "spdkjmsd",
+      "id": 5
+    },
+    {
+      "username": "Oussema",
+      "date": "Thu Jul 02 2020 14:53:53",
+      "action": "Edit",
+      "productName": "spdkjmsd",
+      "id": 6
+    },
+    {
+      "username": "Oussema",
+      "date": "Thu Jul 02 2020 14:54:03",
+      "action": "Delete",
+      "productName": "spdkjmsd",
+      "id": 7
+    },
+    {
+      "username": "Oussema",
+      "date": "Tue Jul 07 2020 09:44:45",
+      "action": "Add",
+      "productName": "-",
+      "id": 8
+    },
+    {
+      "username": "Oussema",
+      "date": "Tue Jul 07 2020 09:44:48",
+      "action": "Delete",
+      "productName": "-",
+      "id": 9
+    },
+    {
+      "username": "Oussema",
+      "date": "Tue Jul 07 2020 09:44:57",
+      "action": "Edit",
+      "productName": "lac 3",
+      "id": 10
+    },
+    {
+      "username": "Oussema",
+      "date": "Tue Jul 07 2020 09:45:07",
+      "action": "Edit",
+      "productName": "lac 3",
+      "id": 11
+    }
+  ],
+  "loggedUser": [
+    {
+      "id": 1,
+      "lastname": "Oussema",
+      "email": "Oussema@gmail.com",
+      "password": "0000"
+    }
+  ]
+}

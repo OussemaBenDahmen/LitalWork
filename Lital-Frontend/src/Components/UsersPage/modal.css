@@ -1,0 +1,20 @@
+.Modal {
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
+.ModalHeader,
+.ModalBody,
+.ModalFooter {
+  background: #fff2cc !important;
+}
+.ModalBody select,
+.ModalBody input {
+  margin: 10px;
+}
+.ModalAddBtn {
+  background: #eaab95 !important;
+  border: none !important;
+}
+.ModalAddBtn:hover {
+  background: #b67b66 !important;
+}

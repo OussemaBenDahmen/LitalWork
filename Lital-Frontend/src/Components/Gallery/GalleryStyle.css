@@ -1,0 +1,76 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Gallery {
+  max-width: 100%;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 200px;
+}
+.productGalleryCard {
+  color: black;
+  width: 200px;
+  min-height: 300px;
+  border: thin gray solid;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px lightgray;
+  margin: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.productGalleryCard p {
+  text-align: left;
+}
+.pageSelector {
+  position: sticky;
+  left: 40%;
+  width: fit-content;
+  height: 30px;
+  display: flex;
+  margin-bottom: 60px;
+}
+.pageSelector button {
+  border: none;
+  width: 40px;
+  height: 35px;
+  border-radius: 7px;
+  border: thin grey solid;
+  outline: none;
+  transition: all 5ms;
+}
+.pageSelector button:hover {
+  border-radius: 0;
+  background: burlywood;
+}
+.DetailBtn {
+  width: fit-content;
+  padding: 5px;
+  transition: 500ms;
+  background: none;
+  border: 3px solid darkgrey;
+  border-radius: 15px;
+  margin-left: 75%;
+  margin-bottom: 10px;
+}
+.DetailBtn:hover {
+  border-radius: 0;
+  border: 3px solid lightgray;
+}
+.EyeIcon {
+  filter: invert(0.7);
+  width: 30px;
+  transition: 500ms;
+}
+.DetailBtn:hover .EyeIcon {
+  filter: invert(0.2);
+}

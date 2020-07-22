@@ -1,0 +1,138 @@
+.MainPage {
+  min-height: 100vh;
+}
+.ArticlesSection {
+  width: 90%;
+  margin: auto;
+}
+.SearchBar {
+  width: 80%;
+  margin: auto auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 5px;
+}
+.SearchBarAndBtn {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.SearchInput {
+  width: 300px;
+  height: 30px;
+  border: thin solid gray;
+  border-radius: 7px;
+  outline: none;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+.SearchBtn {
+  padding: 5px;
+  height: 40px;
+  border: none;
+  background: white;
+  border-radius: 7px;
+  transition: 500ms;
+}
+.SearchBtn:hover {
+  border: thin solid gray;
+  box-shadow: 5px 5px 5px rgb(88, 87, 87);
+}
+.AddProductBtn {
+  width: 50px !important;
+  height: 50px !important;
+  color: rgb(177, 117, 95) !important ;
+  line-height: 30px !important;
+  border-radius: 100% !important;
+  font-size: 30px !important;
+  background: #eaab95 !important;
+  outline: none !important;
+  border: none !important;
+  transition: 500ms !important;
+}
+.AddProductBtn:hover {
+  background: rgb(177, 117, 95);
+  box-shadow: 5px 5px 5px;
+}
+.FilterSelectors {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+select {
+  width: 60px;
+  background-color: white;
+  min-width: 100px;
+  height: 40px;
+  color: black;
+  border: none;
+  border-top: thin solid #dad5d2;
+  border-bottom: thin solid #dad5d2;
+  outline: none;
+}
+
+.TableHead {
+  padding: 5px;
+  background-color: #eaab95;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ArticleItem {
+  height: 120px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border: thin solid lightgray;
+}
+
+.ArticlePhoto {
+  width: 10%;
+}
+@media only screen and (max-width: 600px) {
+  .TableHead {
+    overflow: scroll;
+  }
+  .TableHead p {
+    width: fit-content;
+    margin: 10px;
+  }
+  .ArticleItem {
+    height: fit-content;
+    overflow: scroll;
+  }
+}
+
+.Modal {
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
+.ModalHeader,
+.ModalBody,
+.ModalFooter {
+  background: #fff2cc !important;
+}
+.ModalBody select,
+.ModalBody input {
+  margin: 10px;
+}
+.ModalAddBtn {
+  background: #eaab95 !important;
+  border: none !important;
+}
+.ModalAddBtn:hover {
+  background: #b67b66 !important;
+}
+.ModifyProductBtn {
+  background: none !important;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.DeleteProductBtn {
+  background: none !important;
+}

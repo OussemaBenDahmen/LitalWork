@@ -1,0 +1,58 @@
+.Navbar,
+.Footer {
+  left: 7%;
+  background: white;
+  width: 80%;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.Footer {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.NavbarLogo {
+  transform: scale(0.5, 0.5);
+}
+
+.Navlinks {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.Navlinks a {
+  color: rgb(102, 101, 101);
+  text-decoration: none;
+}
+.Navlinks a:hover {
+  color: rgb(44, 44, 44);
+}
+.LogOutBtn {
+  background: #eaab95;
+  height: 30px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  outline: none;
+  transition: 1s;
+}
+.LogOutBtn:hover {
+  background: #b47e6b;
+  border-radius: 0;
+}
+@media only screen and (max-width: 600px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 300px;
+  }
+  .Navlinks {
+    width: 80%;
+  }
+}

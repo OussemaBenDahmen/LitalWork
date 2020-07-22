@@ -1,0 +1,16 @@
+.ProductDetailSection {
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto;
+}
+.ProductImage {
+  min-width: 25%;
+  min-height: 70vh;
+  border: solid thin gray;
+}
+.ProductDetails {
+  width: 75%;
+  height: 70vh;
+  padding: 20px;
+}
