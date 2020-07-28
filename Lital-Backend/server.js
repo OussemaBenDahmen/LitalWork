@@ -1,5 +1,15 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const multer = require("multer");
+const storage = multer.diskStorage({
+  destination: function (req, file, cbb) {
+    cbb(null, "Public");
+  },
+  filename: function (req, file, cbb) {
+    cbb(null, file.originalname);
+  },
+});
+const Upload = multer({ storage: storage });
 const app = express();
 const bodyParser = require("body-parser");
 const User = require("./app/routes/UserRoutes");
@@ -9,11 +19,13 @@ const HistoryRoute = require("./app/routes/HistoryRoute");
 
 const LoginRoute = require("./app/routes/LoginRoutes");
 const LogoutRoute = require("./app/routes/LogoutRoute");
+// load cookieParser
+app.use(cookieParser());
+
+// Creating A Public Folder
+app.use(express.static("./Public"));
 
 app.use(function (req, res, next) {
-  // load cookieParser
-  app.use(cookieParser());
-  /**** */
   res.header("Access-Control-Allow-Origin", "http://localhost:3000");
   res.header("Access-Control-Allow-Credentials", true);
   res.header(
@@ -38,6 +50,10 @@ app.use("/app/logout", LogoutRoute);
 app.use("/app/user", User);
 app.use("/app/Products", Products);
 app.use("/app/history", HistoryRoute);
+app.use("/app/upload", Upload.single("file"), (req, res) => {
+  const image = req.file;
+  res.send("done");
+});
 
 app.listen(5000, () => {
   console.log(`Successfully connected to the port 5000`);

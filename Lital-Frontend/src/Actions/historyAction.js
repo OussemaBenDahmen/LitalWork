@@ -14,8 +14,8 @@ export function GetHistoryFromApi() {
     })
       .then((res) => dispatch(HistoryAction(res.data)))
       .catch((err) => {
-        if (err.response.status === 401) {
-          window.location.replace("/");
+        if (err.response && err.response.status === 401) {
+          window.location.replace("/404");
         }
       });
   };

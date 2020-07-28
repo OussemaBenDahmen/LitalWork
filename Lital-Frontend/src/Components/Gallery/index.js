@@ -49,19 +49,22 @@ class Gallery extends Component {
                 animationDelay: `${(el.id + 0.8) % 10}ms`,
               }}
             >
-              <img src="" alt="" />
-              <p>{el.name}</p>
-              <p>{el.type}</p>
-              <p>{el.collection}</p>
-              <p>{el.mesure}</p>
-              <p>{el.color}</p>
-              <h2>{el.id}</h2>
-
-              <Link to={`/Admin/Gallery/ProductID=${el.id}`}>
-                <button className="DetailBtn">
-                  <img className="EyeIcon" src={EyeIcon} alt="" />
-                </button>
-              </Link>
+              <div className="PicAndName">
+                <img
+                  className="ProductPic"
+                  src={`http://localhost:5000/${el.Image}`}
+                  alt=""
+                />{" "}
+                <h5>{el.name}</h5>
+              </div>
+              <div className="CardInfo">
+                <h6>{el.type}</h6>
+                <Link to={`./Gallery/ProductID=${el.id}`}>
+                  <button className="DetailBtn">
+                    <img className="EyeIcon" src={EyeIcon} alt="" />
+                  </button>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

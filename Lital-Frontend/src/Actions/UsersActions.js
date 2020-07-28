@@ -48,7 +48,7 @@ export const Login = (payload) => {
 };
 export function LogInAction(user) {
   return (dispatch) => {
-    if (user.email != "") {
+    if (user.email !== "") {
       Axios.post("http://localhost:5000/app/login", user, {
         withCredentials: true,
       }).then((res) => {

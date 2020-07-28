@@ -57,7 +57,7 @@
   box-shadow: 5px 5px 5px;
 }
 .FilterSelectors {
-  width: 100%;
+  width: 90%;
   margin: auto;
   margin-bottom: 30px;
 }
@@ -75,20 +75,30 @@ select {
 
 .TableHead {
   padding: 5px;
+  padding-right: 60px;
   background-color: #eaab95;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-end;
 }
-
+.TableHead p {
+  width: 100px;
+  margin: 5px;
+}
 .ArticleItem {
   height: 120px;
   padding: 5px;
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 30px;
   border: thin solid lightgray;
+}
+.ArticleItem p {
+  width: 100px;
+  margin: 5px;
+  border-right: lightgrey solid thin;
 }
 
 .ArticlePhoto {
@@ -118,7 +128,8 @@ select {
   background: #fff2cc !important;
 }
 .ModalBody select,
-.ModalBody input {
+.ModalBody input,
+.ModalBody textarea {
   margin: 10px;
 }
 .ModalAddBtn {

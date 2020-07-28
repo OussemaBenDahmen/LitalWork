@@ -11,7 +11,7 @@ class ArticleItem extends Component {
       <div className="ArticleItem">
         <img
           className="ArticlePhoto"
-          src="https://lunawood.com/wp-content/uploads/2018/02/placeholder-image.png"
+          src={`http://localhost:5000/${this.props.el.Image}`}
           alt=""
         />
         <p>{this.props.el.name}</p>
@@ -19,7 +19,7 @@ class ArticleItem extends Component {
         <p>{this.props.el.type}</p>
         <p>{this.props.el.collection}</p>
         <p>{this.props.el.marque}</p>
-        <p>{this.props.el.prod}</p>
+        <p>{this.props.el.prod_proto}</p>
         <p>{this.props.el.mesure}</p>
         <p>{this.props.el.color}</p>
         <p>{this.props.el.localisation}</p>

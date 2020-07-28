@@ -7,10 +7,20 @@
 .ProductImage {
   min-width: 25%;
   min-height: 70vh;
-  border: solid thin gray;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  animation: appear 2s;
+}
+.ProductImage img {
+  width: 100%;
 }
 .ProductDetails {
   width: 75%;
   height: 70vh;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }

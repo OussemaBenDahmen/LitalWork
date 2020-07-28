@@ -14,6 +14,8 @@ class Product {
     this.localisation = product.localisation || "-";
     this.carton = product.carton || 0;
     this.quantity = product.quantity || 0;
+    this.image = product.Image || "noImage";
+    this.Detail = product.Detail || "";
   }
 }
 /*************************** */

@@ -16,7 +16,7 @@ class AdminLayout extends Component {
         <NavBar />
         <Switch>
           {this.props.Products.map((el) => (
-            <Route path={`/Admin/Gallery/ProductID=${el.id}`}>
+            <Route path={`/Admin/Gallery/ProductID=${el.id}`} key={el.id}>
               <ProductDetails Product={el} />
             </Route>
           ))}

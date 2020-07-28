@@ -14,10 +14,13 @@ const AddModal = (props) => {
     carton: 0,
     mesure: "-",
     quantity: 0,
-    prod: "-",
+    prod_proto: "-",
     color: "-",
     marque: "-",
+    Image: "",
+    Detail: "",
   });
+  const [SelectedFile, setSelectedFile] = useState({});
   const dispatch = useDispatch();
   const toggle = () => setModal(!modal);
 
@@ -81,7 +84,6 @@ const AddModal = (props) => {
             onChange={(e) => {
               Article.mesure = e.target.value;
               setArticle(Article);
-              console.log(Article);
             }}
           >
             <option value="-1">Mesure</option>
@@ -104,7 +106,6 @@ const AddModal = (props) => {
             onChange={(e) => {
               Article.color = e.target.value;
               setArticle(Article);
-              console.log(Article);
             }}
           />
           <input
@@ -113,7 +114,6 @@ const AddModal = (props) => {
             onChange={(e) => {
               Article.localisation = e.target.value;
               setArticle(Article);
-              console.log(Article);
             }}
           />
           <input
@@ -122,18 +122,16 @@ const AddModal = (props) => {
             onChange={(e) => {
               Article.carton = e.target.value;
               setArticle(Article);
-              console.log(Article);
             }}
           />
           <select
             name="Protptype"
             onChange={(e) => {
-              Article.prod = e.target.value;
+              Article.prod_proto = e.target.value;
               setArticle(Article);
-              console.log(Article);
             }}
           >
-            <option value="">Prod/Proto</option>
+            <option value="">Status</option>
             <option value="Prototype">Prototype</option>
             <option value="Production">Production</option>
           </select>
@@ -143,14 +141,37 @@ const AddModal = (props) => {
             onChange={(e) => {
               Article.quantite = e.target.value;
               setArticle(Article);
-              console.log(Article);
+            }}
+          />
+          <textarea
+            resize="none"
+            placeholder="Commentaire"
+            onChange={(e) => {
+              Article.Detail = e.target.value;
+              setArticle(Article);
+            }}
+          />
+          <input
+            type="file"
+            name="ProductImage"
+            onChange={(e) => {
+              Article.Image = e.target.files[0].name;
+              setSelectedFile(() => {
+                let fd = new FormData();
+                fd.append("file", e.target.files[0]);
+
+                return fd;
+              });
+              setArticle(Article);
             }}
           />
         </ModalBody>
         <ModalFooter className="ModalFooter">
           <Button
             className="ModalAddBtn"
-            onClick={() => dispatch(AddProductToApi(Article))}
+            onClick={() => {
+              dispatch(AddProductToApi(Article, SelectedFile));
+            }}
           >
             Ajouter
           </Button>

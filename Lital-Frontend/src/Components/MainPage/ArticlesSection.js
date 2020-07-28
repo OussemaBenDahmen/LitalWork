@@ -160,13 +160,13 @@ class ArticlesSection extends Component {
         </div>
         <div className="ArticlesTable">
           <div className="TableHead">
-            <p style={{ marginRight: "50px", marginLeft: "20px" }}>Photo</p>
+            <p style={{ marginRight: "35px", marginLeft: "5px" }}>Photo</p>
             <p>Nom</p>
             <p>Reference</p>
             <p>Type</p>
             <p>Collection</p>
             <p>Marque</p>
-            <p>Prototype/Production</p>
+            <p>Status</p>
             <p>Mesure</p>
             <p>Couleur</p>
             <p>Localisation</p>

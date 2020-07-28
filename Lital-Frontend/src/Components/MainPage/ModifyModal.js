@@ -7,6 +7,7 @@ import { EditProductinApi } from "../../Actions/ProductActions/EditProduct";
 const ModifyModal = (props) => {
   const [modal, setModal] = useState(false);
   const [Article, setArticle] = useState(props.Product);
+  const [SelectedFile, setSelectedFile] = useState({});
   const toggle = () => setModal(!modal);
   const dispatch = useDispatch();
   const closeBtn = (
@@ -122,10 +123,11 @@ const ModifyModal = (props) => {
             name="Protptype"
             defaultValue={props.Product.prod}
             onChange={(e) => {
-              Article.prod = e.target.value;
+              Article.prod_proto = e.target.value;
               setArticle(Article);
             }}
           >
+            <option value="">Status</option>
             <option value="Prototype">Prototype</option>
             <option value="Production">Production</option>
           </select>
@@ -137,12 +139,35 @@ const ModifyModal = (props) => {
               Article.quantity = e.target.value;
               setArticle(Article);
             }}
+          />{" "}
+          <textarea
+            resize="none"
+            placeholder="Commentaire"
+            defaultValue={props.Product.Detail || ""}
+            onChange={(e) => {
+              Article.Detail = e.target.value;
+              setArticle(Article);
+            }}
+          />
+          <input
+            type="file"
+            name="ProductImage"
+            onChange={(e) => {
+              Article.Image = e.target.files[0].name;
+              setSelectedFile(() => {
+                let fd = new FormData();
+                fd.append("file", e.target.files[0]);
+
+                return fd;
+              });
+              setArticle(Article);
+            }}
           />
         </ModalBody>
         <ModalFooter className="ModalFooter">
           <Button
             className="ModalAddBtn"
-            onClick={() => dispatch(EditProductinApi(Article))}
+            onClick={() => dispatch(EditProductinApi(Article, SelectedFile))}
           >
             Modifier
           </Button>{" "}

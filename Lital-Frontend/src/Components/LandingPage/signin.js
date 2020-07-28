@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "../../Images/logo_lital_0.png";
 import "./signin.css";
 import { connect } from "react-redux";
-import { getUsersFromApi, LogInAction } from "../../Actions/UsersActions";
+import { LogInAction } from "../../Actions/UsersActions";
 
 class Signin extends Component {
   state = {
